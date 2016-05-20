@@ -1,16 +1,13 @@
 #include<iostream>
 using namespace std;
 int add(int n){
-    int sum3=0,sum5=0,sum=0;
+    int sum=0;
 
     for(int i=3;i<n;i++){
-        if(i%3==0){
-            sum3=sum3+i;
-        } else if(i%5==0){
-            sum5=sum5+i;
+        if((i%3==0)||(i%5==0)){
+            sum=sum+i;
         }
     }
-    sum=sum3+sum5;
     return sum;
 }
 int main()
