@@ -1,18 +1,15 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
-int add(int n){
-    int sum=0;
-
-    for(int i=3;i<n;i++){
-        if((i%3==0)||(i%5==0)){
-            sum=sum+i;
-        }
-    }
-    return sum;
+long long add(long long N)
+{
+    N=(N-1);
+    long long sum = (((N/3)*(3+((N/3)*3)))+((N/5)*(5+((N/5)*5)))-((N/15)*(15+((N/15)*15))))/2;
+return sum;
 }
 int main()
 {
-    int T,a[100000],j;
+    long long T,a[100000],j;
     cin>>T;
     for(j=0;j<T;j++){
         cin>>a[j];
